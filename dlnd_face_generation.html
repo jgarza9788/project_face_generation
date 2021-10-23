@@ -23157,7 +23157,12 @@ Epoch [  250/  250] | d_loss: 0.0049 | g_loss: 5.0968
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Answer:</strong> (Write your answer in this cell)</p>
+<p><strong>Answer:</strong><br>
+I see my generated faces have a lot og duplicates of the same or similar face. These faces represent the ones that were the most likely to "trick" or "get passed" the discriminator. With more training my generator would prefect just a few number of faces. This makes sense, working off the analogy from the lesson ... why would a counter-fitter try to create all the different notes (one,five,ten,twenty, etc) ? They wouldn't, in the real would counter-fitters only create twenty notes. Lower notes (one,five,ten) are not wroth counter-fitting, and anything higher is too suspicious. Similarly my generator network tries to limit the number of different images it creates.</p>
+<p>The size of the models might also limit the how many faces it could learn and generate. A larger model would take longer to train, however it should be able to come up with a wider range of faces.</p>
+<p>I trained my models for 250 epochs, however looking at the graph above, i might be able to get a very simiar result if i stopped at 100-150.</p>
+<p>I did not test out too many optimizers, however the learning rate could be adjusted over time. so start with a high learning rate (0.05 or 0.0005) and then lower it a tiny bit after every few epochs to end with a learning like of 0.0005 or lower.</p>
+<p>Assuming that the dataset is a random selection of all the celebrities photos it would make sense that my generator network generates mostly women's (or female like) faces. This makes sense. Many celebrities are known for looking good (other adjectives) ... and one of the feminine traits is looking good... so more pictures are taken of them.</p>
 
 </div>
 </div>
